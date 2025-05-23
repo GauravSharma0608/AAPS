@@ -1,0 +1,19 @@
+public class Reverse_String {
+    public void reverse_string(char[] s) {
+        int i = 0, j = s.length - 1;
+        while (i < j) {
+            char temp = s[i];
+            s[i] = s[j];
+            s[j] = temp;
+            i++;
+            j--;
+        }
+    }
+
+    public static void main(String[] args) {
+        Reverse_String rs = new Reverse_String();
+        char[] input = {'h', 'e', 'l', 'l', 'o'};
+        rs.reverse_string(input);
+        System.out.println("Reversed: " + String.valueOf(input));  // Output: olleh
+    }
+}
